@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node-app:
+    container_name: "express-node-app-prod-container"
+    build:
+      context: .
+      target: production
+    ports:
+      - "${PROD_MACHINE_PORT}:${PORT}"
+    environment:
+      - NODE_ENV=production
