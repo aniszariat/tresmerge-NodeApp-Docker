@@ -48,8 +48,8 @@ services:
     volumes:
       - postgres-db:/var/lib/postgresql/data
     environment:
-      POSTGRES_INITDB_ROOT_USERNAME: root
-      POSTGRES_INITDB_ROOT_PASSWORD: example
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
 
 volumes:
   # mongo-db:
