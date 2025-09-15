@@ -44,9 +44,6 @@ client
 //     .catch((err) => console.log('failed to connect: ', err)
 //     );
 
-
-
-
 // app.get('/', (req, res) => res.send('<h1>welcome Anis to App!</h1><p>hello Anis</p>'));
 app.get('/', (req, res) => {
     redisClient.set('products', 'porducts...')
