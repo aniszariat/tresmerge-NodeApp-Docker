@@ -5,8 +5,8 @@ const redis = require('redis')
 // app init
 const app = express();
 const PORT = process.env.PORT || 4000;
-// const HOST = '0.0.0.0';
-const HOST = 'localhost';
+const HOST = '0.0.0.0';
+// const HOST = 'localhost';
 
 // connect to redis
 const REDIS_PORT = 6379
