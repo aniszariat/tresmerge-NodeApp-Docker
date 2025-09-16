@@ -48,7 +48,7 @@ client
 app.get('/', (req, res) => {
     redisClient.set('products', 'porducts...')
     // res.send('<h1>welcome Anis to App!</h1>')
-    res.send('<h1>welcome Anis to App!</h1><p>hello Anis from AWS</p>')
+    res.send('<h1>welcome Anis to App from AWS!</h1><p>hello Anis from AWS</p>')
 });
 app.get('/data', (req, res) => {
     const products = redisClient.get('products')
