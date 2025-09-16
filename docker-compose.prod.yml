@@ -2,6 +2,7 @@ version: '3'
 services:
   node-app:
     container_name: "express-node-app-prod-container"
+    image: aniszariat/tresmerge-nodeapp-docker
     build:
       context: .
       target: production
