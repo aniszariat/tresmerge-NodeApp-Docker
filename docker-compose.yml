@@ -2,6 +2,7 @@ version: '3'
 services:
   node-app:
     build: .
+    image: aniszariat/tresmerge-nodeapp-docker
     env_file:
       - ./.env
     depends_on:
