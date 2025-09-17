@@ -1,14 +1,14 @@
 version: '3'
 services:
   node-app:
-    container_name: "express-node-app-dev-container"
+    # container_name: "express-node-app-dev-container"
     image: aniszariat/tresmerge-nodeapp-docker
     build:
       context: .
       target: development
     volumes:
       - ./src:/nodeApp/src:ro
-    ports:
-      - "${DEV_MACHINE_PORT}:${PORT}"
+    # ports:
+    #   - "${DEV_MACHINE_PORT}:${PORT}"
     environment:
       - NODE_ENV=development

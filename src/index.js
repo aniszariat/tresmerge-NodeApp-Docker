@@ -2,11 +2,12 @@ const express = require('express')
 const mongoose = require('mongoose');
 const { Client } = require('pg')
 const redis = require('redis')
+const os = require('os')
 // app init
 const app = express();
 const PORT = process.env.PORT || 4000;
-const HOST = '0.0.0.0';
-// const HOST = 'localhost';
+// const HOST = '0.0.0.0';
+const HOST = 'localhost';
 
 // connect to redis
 const REDIS_PORT = 6379
@@ -48,7 +49,9 @@ client
 app.get('/', (req, res) => {
     redisClient.set('products', 'porducts...')
     // res.send('<h1>welcome Anis to App!</h1>')
+    console.log(`traffic from ${os.hostname}`);
     res.send('<h1>welcome Anis to App using docker hub!</h1><h2>docker hub!</h2><p>hello Anis from AWS</p>')
+    
 });
 app.get('/data', (req, res) => {
     const products = redisClient.get('products')
