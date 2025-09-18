@@ -5,7 +5,9 @@ services:
     image: aniszariat/tresmerge-nodeapp-docker
     build:
       context: .
-      target: production
+      # target: production
+      args:
+        - NODE_ENV=production
     ports:
       - "${PROD_MACHINE_PORT}:${PORT}"
     environment:
